@@ -1,0 +1,72 @@
+#bat che do rewrite
+RewriteEngine On
+
+#rewrite url : index.php
+RewriteRule "trang-chu" "index.php"
+
+#rewrite url : index.php?controller=about
+RewriteRule "gioi-thieu" "index.php?controller=about"
+
+#rewrite url : index.php?controller=listproduct&id=2
+
+
+#rewrite url : index.php?controller=listproduct&id=$1&name=$2
+RewriteRule "^id/(.*)/san-pham/(.*)$" "index.php?controller=listproduct&id=$1&name=$2"
+
+#rewrite url : index.php?controller=detail&id=62
+RewriteRule "^name/(.*)/id/(.*)$" "index.php?controller=detail&name=$1&id=$2"
+
+#rewrite url : index.php?controller=detail_sale&id=2
+RewriteRule "^sale/name/(.*)/id/(.*)$" "index.php?controller=detail_sale&name=$1&id=$2"
+
+#rewrite url : index.php?controller=checkout
+RewriteRule "^thanh-toan$" "index.php?controller=checkout"
+
+#rewrite url : index.php?controller=cart
+RewriteRule "^gio-hang$" "index.php?controller=cart"
+
+#rewrite url : index.php?controller=cart&act=add&id=2
+RewriteRule "^gio-hang/(.*)/(.*)$" "index.php?controller=cart&act=$1&id=$2"
+
+#rewrite url : index.php?controller=sale
+RewriteRule "^san-pham-sale$" "index.php?controller=sale"
+
+#rewrite url : index.php?controller=detail&id=1
+RewriteRule "^namehot/(.*)/id/(.*)$" "index.php?controller=detail&namehot=$1&id=$2"
+
+#rewrite url : index.php?controller=detail&id=1
+RewriteRule "^namenews/(.*)/id/(.*)$" "index.php?controller=detail&namenews=$1&id=$2"
+
+#rewrite url : index.php?controller=hotproduct
+RewriteRule "^san-pham-hot$" "index.php?controller=hotproduct"
+
+#rewrite url : index.php?controller=newsproduct
+RewriteRule "^san-pham-news$" "index.php?controller=newsproduct"
+
+#rewrite url : index.php?controller=sale&p=3
+RewriteRule "^san-pham-sale/page/(.*)$" "index.php?controller=sale&p=$1"
+
+#rewrite url : index.php?controller=hotproduct&p=3
+#RewriteRule "^san-pham-hot/page/(.*)$" "index.php?controller=hotproduct&p=$3"
+
+#rewrite url : index.php?controller=newsproduct&p=3
+RewriteRule "^san-pham-news/page/(.*)$" "index.php?controller=newsproduct&p=$1"
+
+#rewrite url : index.php?controller=listproduct&id=1&p=6
+RewriteRule "^id/(.*)/page/(.*)$" "index.php?controller=listproduct&id=$1&p=$2"
+
+
+#rewrite url : index.php?controller=detail&id=89
+#RewriteRule "^detail-cart/(.*)/id/(.*)$" "index.php?controller=detail&name=$1&id=$2"
+
+#rewrite url : index.php?controller=hotproduct&p=2
+RewriteRule "^san-pham-hot/page/(.*)$" "index.php?controller=hotproduct&p=$1"
+
+#rewrite url : index.php?controller=timkiem&key=quần+áo
+RewriteRule "^tim-kiem/key/(.*)$" "index.php?controller=timkiem&key=$1"
+
+#rewrite url : index.php?controller=timkiem&key=quần%20áo&p=2
+RewriteRule "^tim-kiem/key/(.*)/page/(.*)$" "index.php?controller=timkiem&key=$1&p=$2"
+
+#rewrite url :index.php?controller=cart
+RewriteRule "^cart$" "index.php?controller=cart"
